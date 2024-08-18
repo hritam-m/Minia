@@ -1,0 +1,25 @@
+﻿@model Minia.Models.ProductModel
+
+<div class="col-md-6 col-xl-3">
+    <div class="card">
+        <img class="card-img-top img-fluid" src="@Url.Content(Model.ImageUrl)" alt="Product image cap">
+        <div class="card-body">
+            <h4 class="card-title">@Model.Title</h4>
+            <ul class="product-rating-list">
+                @for (int i = 0; i < 5; i++)
+                {
+                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                }
+            </ul>
+            <p class="card-text">
+                @Model.Description
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <h4 class="product-price">₹@Model.Price</h4>
+                <div class="button-area">
+                    <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light float-end">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
